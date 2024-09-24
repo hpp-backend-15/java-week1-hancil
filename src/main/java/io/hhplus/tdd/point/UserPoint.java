@@ -7,6 +7,8 @@ public record UserPoint(
 ) {
 
     public static UserPoint empty(long id) {
-        return new UserPoint(id, 0, System.currentTimeMillis());
+        //사용자가 존재하지 않으면 null 반환한다.
+        return null;
+//        return new UserPoint(id, 0, System.currentTimeMillis());
     }
 }

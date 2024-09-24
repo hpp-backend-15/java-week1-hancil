@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.BDDMockito.given;
 
-class PointServiceTest {
+class GetPointServiceTest {
 
     @Mock
     private PointService pointService;

@@ -22,5 +22,11 @@ public record UserPoint(
     }
 
     //포인트 사용에 대한 기능 구현도 준비해야함
-
+    public UserPoint consumePoints(long amount) {
+        long newPoint = this.point - amount;
+        if (newPoint < 0) {
+            throw new IllegalArgumentException("포인트가 부족합니다.");
+        }
+        return new UserPoint(this.id, newPoint, System.currentTimeMillis());
+    }
 }

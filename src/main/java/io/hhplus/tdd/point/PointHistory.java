@@ -1,7 +1,7 @@
 package io.hhplus.tdd.point;
 
 public record PointHistory(
-        long id,
+        Long id,
         long userId,
         long amount,
         TransactionType type,
@@ -11,7 +11,7 @@ public record PointHistory(
 
     public static PointHistory create(long userId, long amount, TransactionType type) {
         return new PointHistory(
-                System.currentTimeMillis(),  // 고유 ID를 시간으로 임시 생성 (필요에 따라 수정 가능)
+                null,  // 고유 ID는 db에서 저장할 때 생성이 되므로 primitive -> Wrapper 로 변환하여 null로 객체를 생성한다.
                 userId,
                 amount,
                 type,

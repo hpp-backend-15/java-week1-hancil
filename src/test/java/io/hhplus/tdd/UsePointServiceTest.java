@@ -106,7 +106,7 @@ class UsePointServiceTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
                 userPoint.consumePoints(requestAmount));
 
-        assertEquals("포인트가 부족합니다.",exception.getMessage());
+        assertEquals("보유한 포인트보다 많은 금액을 사용할 수 없습니다.",exception.getMessage());
     }
 
 

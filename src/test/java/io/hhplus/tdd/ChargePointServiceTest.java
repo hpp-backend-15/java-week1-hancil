@@ -72,16 +72,13 @@ class ChargePointServiceTest {
         long[] chargeAmount = new long[] {0L, -200L};
 
         for(long amount : chargeAmount) {
-
             //when
             IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () ->
                     pointService.chargeUserPoint(id, amount));
 
             //then
             assertEquals("충전 금액은 0보다 커야 합니다.", exception.getMessage());
-
         }
-
     }
 
 
